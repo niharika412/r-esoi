@@ -1,0 +1,25 @@
+.img-fluid{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+mat-toolbar{
+    background-color: #2b5468;
+    color: white;
+}
+
+
+.second-toolbar,.navbar-brand, .navbar-nav, .features{
+  background-color:#f9f9f9;
+  color: #603A27;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.features{
+  padding: 5%;
+}
+
+.icons{
+  color: #37a000;
+}

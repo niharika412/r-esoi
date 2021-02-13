@@ -1,0 +1,33 @@
+<app-navbar (plansEmitter)='plansClicked($event)'></app-navbar>
+<ngb-carousel *ngIf="images && !plans">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[0]" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Hassle free</h3>
+        <p>Sign up and you will receive meeting updates regularly.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[1]" alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Helpful</h3>
+        <p>Research has proven that speaking is an essential component for learning a language.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[2]" alt="Random third slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Inexpensive</h3>
+        <p>Fast learning, not very expensive, pay what you can!</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+<app-plans *ngIf="plans"></app-plans>
+  
