@@ -10,9 +10,6 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
-  @Output()
-  plansEmitter:any=new EventEmitter();
-
   imagePath = '../../assets/logo.png';
   width: any;
   ngOnInit(): void {
@@ -22,13 +19,16 @@ export class NavbarComponent implements OnInit {
   onResize() {
     this.width = window.innerWidth;
   }
-  isMenuCollapsed=true;
+  isOpen = false;
   color: ThemePalette = 'accent';
   checked = false;
   disabled = false;
 
+  triggerOrigin:any;
 
-  plans(){
-    this.plansEmitter.emit(true);
+  toggle(trigger: any) {
+    this.triggerOrigin = trigger;
+    this.isOpen = !this.isOpen
   }
+  
 }

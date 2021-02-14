@@ -8,9 +8,4 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
   title = 'reesoi';
   images=['../../assets/wine.jpg','../../assets/friends.jpg','../../assets/comp.jpg'];
-
-  plans:any;
-  plansClicked(value:boolean){
-    this.plans=value;
-  }
 }

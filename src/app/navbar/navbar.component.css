@@ -4,21 +4,21 @@
   margin-right: auto;
 }
 
-mat-toolbar{
+.first-toolbar{
     background-color: #2b5468;
     color: white;
 }
 
+.example-spacer {
+  flex: 1 1 auto;
+}
 
-.second-toolbar,.navbar-brand, .navbar-nav, .features{
+.second-toolbar,.features{
   background-color:#f9f9f9;
   color: #603A27;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.features{
-  padding: 5%;
-}
 
 .icons{
   color: #37a000;

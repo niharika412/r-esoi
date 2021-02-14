@@ -1,34 +1,49 @@
-<mat-toolbar>
+<mat-toolbar class="first-toolbar">
+  <span *ngIf="width<640;"><button mat-icon-button (click)="isOpen=!isOpen" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+      <mat-icon>menu</mat-icon>
+    </button></span>
   <img class="img-fluid" src={{imagePath}}>
 </mat-toolbar>
-<nav class="navbar navbar-expand-lg second-toolbar">
-  <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
-    &#9776;
-  </button>
-  <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
-    <ul class="navbar-nav">
-      <li class=" features">
-        <!-- Step 4: Close the menu when a link is clicked. -->
-        <a class="features" mat-button [routerLink]="'.'" (click)="isMenuCollapsed = true">HOME
-          <span class="material-icons icons">
-            house_siding
-            </span>
-        </a>
-      </li>
-      <li class=" features">
-        <a class="features" mat-button [routerLink]="'.'" (click)="isMenuCollapsed = true">ABOUT
-          <span class="material-icons icons">receipt</span>
-        </a>
-      </li>
-      <li class=" features">
-        <a class="features" mat-button [routerLink]="'.'" (click)="isMenuCollapsed = true" (click)="plans()">PLANS
-          <span class="material-icons icons">
-            play_lesson
-            </span>
-        </a>
-      </li>
-    </ul>
-  </div>
+
+<mat-toolbar class="second-toolbar" *ngIf="width>640;">
+  <a class="features" mat-button [routerLink]="['/home']">HOME
+    <span class="material-icons icons">
+      house_siding
+    </span>
+  </a>
+  <a class="features" mat-button [routerLink]="'.'">ABOUT
+    <span class="material-icons icons">receipt</span>
+  </a>
+  <a class="features" mat-button [routerLink]="['/plans']">PLANS
+    <span class="material-icons icons">
+      play_lesson
+    </span>
+  </a>
+  <span class="example-spacer"></span>
   <mat-slide-toggle class="example-margin" [color]="color" [checked]="checked" [disabled]="disabled">french
   </mat-slide-toggle>
-</nav>
+</mat-toolbar>
+
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="isOpen"
+>
+<mat-list role="list" class="second-toolbar">
+  <mat-list-item role="listitem"><a class="features" mat-button [routerLink]="['/home']" >HOME
+    <span class="material-icons icons">
+      house_siding
+    </span>
+  </a></mat-list-item>
+  <mat-list-item role="listitem"><a class="features" mat-button [routerLink]="'.'">ABOUT
+    <span class="material-icons icons">receipt</span>
+  </a></mat-list-item>
+  <mat-list-item role="listitem"><a class="features" mat-button [routerLink]="['/plans']">PLANS
+    <span class="material-icons icons">
+      play_lesson
+    </span>
+  </a></mat-list-item>
+</mat-list>
+</ng-template>
+<router-outlet></router-outlet>
