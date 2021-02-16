@@ -11,11 +11,14 @@ export class PlansComponent implements OnInit {
 
   width: any;
   cols:any;
+  small:any;
   ngOnInit(): void {
     this.width = window.innerWidth;
-    console.log(this.width)
+    // console.log(this.width)
+    
     if(this.width<640){
       this.cols="1";
+      this.small=true;
     }
     else{
       this.cols="2"
@@ -33,6 +36,11 @@ export class PlansComponent implements OnInit {
   }
 
   meetings=['Two meetings every weekend','Equal time for french and english','Active and healthy sessions with focus on practicing the language', 'Interesting topics']
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
+  }
+  group=['WhatsApp and Instagram Group Access to all members', 'Helpful, healthy conversations', 'Fast Updates' , 'Everyday tasks on the group for practice(not compulsory)']
 
+  prices=['Pay what you can!','Starting from €2 upto whatever you can offer', 'Goal is to learn so no promotions/advertisers','Affordable for all age groups']
 
 }

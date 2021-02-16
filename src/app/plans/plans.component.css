@@ -8,6 +8,10 @@
   color:inherit;
 }
 
+.display-4-sm{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: xx-large;
+}
 mat-card-header{
   display: inherit;
 }
@@ -68,22 +72,27 @@ img {
   display: block;
 }
 
-
-.down {
-  width: 100%;
-  animation: MoveUpDown 1s linear infinite;
-  position: absolute;
-  left: 0;
-  color: brown;
-  text-align: center;
-  bottom: 0;
+.title{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
 }
 
-@keyframes MoveUpDown {
-  0%, 100% {
-    bottom: 0;
-  }
-  50% {
-    bottom: 100px;
-  }
+
+.down {
+  color: brown;
+  text-align: center;
+  align-items: center;
+  animation: mymove 1s infinite;
+}
+
+
+@keyframes mymove{
+  from{opacity: 0;}
+  to{opacity: 100;}
+}
+
+.container-fluid{
+  background-color: #b9eff6;
+  color: brown;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
