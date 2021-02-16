@@ -3,3 +3,45 @@ img{
     height: auto;
     max-height: 600px;
 }
+
+.description{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    text-align: justify;
+}
+
+.dtitle{
+    font-family: monospace;
+    color:#2b5468;
+}
+
+
+/* // Relevant styles */
+.image-stack {
+    display: grid;
+    position: relative; /* imperative for the overlapping to work*/
+    grid-template-columns: repeat(12, 1fr);
+  }
+  
+  .display-4{
+    color: #2b5468;
+  }
+  
+  .image-stack__item--bottom {
+    grid-column: 4 / -1;
+    grid-row: 1;
+  }
+  
+  .image-stack__item--top {
+    grid-row: 1;
+    grid-column: 1/ span 8;
+    padding-top: 60%; /* slightly arbitrary, keeps proportion once resized*/
+    z-index: 1; /* tells the browser to make this image on top*/
+  }
+
+
+  .container-fluid{
+    background-color: #b9eff6;
+    color: brown;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
