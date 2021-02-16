@@ -18,7 +18,7 @@ export class PlansComponent implements OnInit {
       this.cols="1";
     }
     else{
-      this.cols="3"
+      this.cols="2"
     }
   }
   @HostListener('window:resize', ['$event'])
@@ -32,7 +32,7 @@ export class PlansComponent implements OnInit {
     }
   }
 
-
+  meetings=['Two meetings every weekend','Equal time for french and english','Active and healthy sessions with focus on practicing the language', 'Interesting topics']
 
 
 }

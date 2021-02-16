@@ -1,6 +1,10 @@
 <mat-toolbar class="first-toolbar">
-  <span *ngIf="width<640;"><button mat-icon-button (click)="isOpen=!isOpen" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
-      <mat-icon>menu</mat-icon>
+  <span><button mat-icon-button (click)="isOpen=!isOpen" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+      <mat-icon *ngIf="isOpen==false; else close">menu</mat-icon>
+      <ng-template #close>
+        <mat-icon *ngIf="width<640">highlight_off</mat-icon>
+        <mat-icon *ngIf="width>640">menu</mat-icon>
+      </ng-template>
     </button></span>
   <img class="img-fluid" src={{imagePath}}>
 </mat-toolbar>
@@ -25,25 +29,21 @@
 </mat-toolbar>
 
 
-<ng-template
-  cdkConnectedOverlay
-  [cdkConnectedOverlayOrigin]="trigger"
-  [cdkConnectedOverlayOpen]="isOpen"
->
-<mat-list role="list" class="second-toolbar">
-  <mat-list-item role="listitem"><a class="features" mat-button [routerLink]="['/home']" >HOME
-    <span class="material-icons icons">
-      house_siding
-    </span>
-  </a></mat-list-item>
-  <mat-list-item role="listitem"><a class="features" mat-button [routerLink]="'.'">ABOUT
-    <span class="material-icons icons">receipt</span>
-  </a></mat-list-item>
-  <mat-list-item role="listitem"><a class="features" mat-button [routerLink]="['/plans']">PLANS
-    <span class="material-icons icons">
-      play_lesson
-    </span>
-  </a></mat-list-item>
-</mat-list>
+<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen">
+  <mat-list role="list" class="second-toolbar" *ngIf="width<640">
+    <mat-list-item role="listitem"><a class="features" mat-button [routerLink]="['/home']">HOME
+        <span class="material-icons icons">
+          house_siding
+        </span>
+      </a></mat-list-item>
+    <mat-list-item role="listitem"><a class="features" mat-button [routerLink]="'.'">ABOUT
+        <span class="material-icons icons">receipt</span>
+      </a></mat-list-item>
+    <mat-list-item role="listitem"><a class="features" mat-button [routerLink]="['/plans']">PLANS
+        <span class="material-icons icons">
+          play_lesson
+        </span>
+      </a></mat-list-item>
+  </mat-list>
 </ng-template>
 <router-outlet></router-outlet>

@@ -1,13 +1,89 @@
-.example-card {
-    max-width: 400px;
-  }
 
-mat-card{
-    margin: 20%;
-    display:inline-block
-}
-  
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+.example-header-image {
     background-size: cover;
   }
+
+.listitems{
+  display: inherit;
+  color:inherit;
+}
+
+mat-card-header{
+  display: inherit;
+}
+
+::ng-deep .mat-line{
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
+}
+
+.yang-card{
+  background-color: #2b5468;
+  color: white;
+  transition: 0.5s;
+  align-items: center;
+}
+
+.yang-card:hover{
+  background-color: white;
+  color: #2b5468;
+}
+
+.yang{
+  background-color: #2b5468;
+  color: white;
+  display:inline-block
+}
+
+.content{
+  color: wheat;
+}
+
+
+/* // Relevant styles */
+.image-stack {
+  display: grid;
+  position: relative; /* imperative for the overlapping to work*/
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.display-4{
+  color: #2b5468;
+}
+
+.image-stack__item--bottom {
+  grid-column: 4 / -1;
+  grid-row: 1;
+}
+
+.image-stack__item--top {
+  grid-row: 1;
+  grid-column: 1/ span 8;
+  padding-top: 60%; /* slightly arbitrary, keeps proportion once resized*/
+  z-index: 1; /* tells the browser to make this image on top*/
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+
+.down {
+  width: 100%;
+  animation: MoveUpDown 1s linear infinite;
+  position: absolute;
+  left: 0;
+  color: brown;
+  text-align: center;
+  bottom: 0;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 100px;
+  }
+}

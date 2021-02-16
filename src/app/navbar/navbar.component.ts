@@ -26,6 +26,8 @@ export class NavbarComponent implements OnInit {
 
   triggerOrigin:any;
 
+  trigger:any;
+
   toggle(trigger: any) {
     this.triggerOrigin = trigger;
     this.isOpen = !this.isOpen
