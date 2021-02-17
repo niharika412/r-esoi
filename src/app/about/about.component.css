@@ -1,0 +1,41 @@
+
+.example-header-image {
+    background-size: cover;
+  }
+
+.listitems{
+  display: inherit;
+  color:inherit;
+}
+
+.display-4-sm{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: xx-large;
+}
+mat-card-header{
+  display: inherit;
+}
+
+.video-stack-sm{
+    height: 250px;
+    width: 300px;
+}
+
+.video-stack{
+    height: 500px;
+    width: 700px;
+}
+
+.title{
+    color: white;
+    font-family: monospace;
+    background-color: #2b5468;
+    font-size: 30px;
+}
+
+
+.title-sm{
+    color: white;
+    font-family: monospace;
+    background-color: #2b5468;
+}

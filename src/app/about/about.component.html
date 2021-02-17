@@ -1,0 +1,47 @@
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <p [ngClass]="{'display-4':!small,'display-4-sm':small}"><strong>About Us</strong></p>
+            <p >
+                <mat-list>
+                    <div mat-subheader>Objectives</div>
+                    <mat-list-item *ngFor="let list of abouts">
+                        <mat-icon mat-list-icon>bubble_chart</mat-icon>
+                        <div mat-line>{{list}}</div>
+                    </mat-list-item>
+                </mat-list>
+            </p>
+            <br>
+            <p><button class="btn btn-primary text-center">Sign Up</button>
+                &nbsp;
+                <button class="btn btn-success text-center">Read More</button>
+            </p>
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="container">
+                <div>
+                    <video autoplay loop [ngClass]="{'video-stack':!small,'video-stack-sm':small}">
+                        <source src="../../assets/promo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col"  [ngClass]="{'title':!small,'title-sm':small}">
+            Other than all of the above, we are a small business(very small, everything is from scratch- even the website<span class="material-icons">
+                insert_emoticon
+                </span>) trying to grow by connecting language enthusiasts from all over the world. Having noticed that there were not many applications to connect people who want to learn, we decided to create one ourselves. The purpose is efficiency and fluency. Once you sign up,you get access for a month to the members' only group. The 'pay what you can' feature makes it accessible for people from all age groups. You can pay as less as €2 to join the cohort. Hoping to talk to you soon.
+            <br>
+            Regards,<br>
+            <span class="material-icons">
+                favorite_border
+                </span>Team réesoi.
+        </div>
+    </div>
+</div>
+<br><br>

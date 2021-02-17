@@ -16,13 +16,17 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatListModule} from '@angular/material/list';
 import {OverlayModule} from '@angular/cdk/overlay';
+import { AboutComponent } from './about/about.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     PlansComponent,
-    DashboardComponent
+    DashboardComponent,
+    AboutComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
