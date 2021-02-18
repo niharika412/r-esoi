@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit, Output,EventEmitter } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import {MatDialog} from '@angular/material/dialog';
-
+import {QuicksignComponent} from '../quicksign/quicksign.component';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
   
   openDialog() {
-    const dialogRef = this.dialog.open(DialogContentExampleDialog);
+    const dialogRef = this.dialog.open(QuicksignComponent);
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
@@ -42,11 +42,3 @@ export class NavbarComponent implements OnInit {
   }
   
 }
-
-
-@Component({
-  selector: 'dialog-content-example-dialog',
-  templateUrl: 'dialog-content.html',
-  
-})
-export class DialogContentExampleDialog {}

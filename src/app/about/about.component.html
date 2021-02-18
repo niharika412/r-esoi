@@ -13,9 +13,11 @@
                 </mat-list>
             </p>
             <br>
-            <p><button class="btn btn-primary text-center">Sign Up</button>
+            <p><a [routerLink]="['/signup']">
+                <button class="btn btn-primary text-center">Sign Up</button></a>
                 &nbsp;
-                <button class="btn btn-success text-center">Read More</button>
+                <a [routerLink]="['/plans']">
+                    <button class="btn btn-success text-center">Read More</button></a>
             </p>
 
         </div>

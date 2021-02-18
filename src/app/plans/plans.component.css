@@ -24,13 +24,14 @@ mat-card-header{
 .yang-card{
   background-color: #2b5468;
   color: white;
-  transition: 0.5s;
+  transition: all .2s ease-in-out;
   align-items: center;
 }
 
 .yang-card:hover{
   background-color: white;
   color: #2b5468;
+  transform:scale(1.02);
 }
 
 .yang{

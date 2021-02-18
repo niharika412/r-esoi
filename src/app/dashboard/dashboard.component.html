@@ -28,6 +28,8 @@
   </ng-template>
 </ngb-carousel>
 
+<a [routerLink]="['/signup']" *ngIf="small">
+  <button class="btn btn-success text-center btn-block">Sign Up</button></a>
 <div class="container">
   <div class="description">
     <p class="text-center dtitle" [ngStyle]="small?{'font-size': '40px'} : {'font-size': '90px'}">What is réesoi?</p>

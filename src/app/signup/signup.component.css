@@ -17,11 +17,12 @@
 
 .example-card{
     margin-bottom: 10px;
-    transition: 0.5s;
+    transition: all .2s ease-in-out;;
 }
 
 .example-card:hover{
     background-color: #f9f9f9;
+    transform:scale(1.05);
   }
 
 .france{
@@ -40,6 +41,10 @@
 
 mat-list{
   text-align: left;
+  background-color: #f9f9f9;
+}
+
+.middle{
   background-color: #f9f9f9;
 }
   

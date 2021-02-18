@@ -23,3 +23,16 @@
 .icons{
   color: #37a000;
 }
+
+
+::ng-deep .mat-line{
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
+}
+
+
+.signup{
+  background-color: #37a000;
+  color: white;
+  font-family: monospace;
+}

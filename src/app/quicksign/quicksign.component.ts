@@ -11,5 +11,7 @@ export class QuicksignComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  folders=['Online meetings on weekends','Private group access to other french learners', 'Lifelong friends :)']
+
 
 }
