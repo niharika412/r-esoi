@@ -15,12 +15,36 @@
     margin-bottom: 10px;
 }
 
-mat-card{
+.example-card{
     margin-bottom: 10px;
     transition: 0.5s;
 }
 
-mat-card:hover{
+.example-card:hover{
     background-color: #f9f9f9;
   }
+
+.france{
+  background-color:#683F2B ;
+  color: white;
+}
+
+.fr{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+::ng-deep .mat-line{
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
+}
+
+mat-list{
+  text-align: left;
+  background-color: #f9f9f9;
+}
   
+
+.new{
+  background-color: salmon ;
+  color: white;
+}

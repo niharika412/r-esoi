@@ -1,38 +1,77 @@
 <br>
 <div class="container">
-    <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-12 md-2">
-            <mat-card class="example-card">
-                <img mat-card-image src="../../assets/flag.svg" alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                    <mat-card-title>Goals</mat-card-title>
-                    <p>
-                      Improving the language that you're learning by engaging in healthy conversations+ making friends
-                    </p>
-                  </mat-card-content>
-              </mat-card>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12">
-            <mat-card class="example-card">
-                <img mat-card-image src="../../assets/dollar.svg" alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                    <mat-card-title>Pricing</mat-card-title>
-                    <p>
-                      Pay what you can! Pay as less as 2 euros and join the cohort.
-                    </p>
-                  </mat-card-content>
-              </mat-card>
-        </div><div class="col-lg-4 col-md-4 col-sm-12">
-            <mat-card class="example-card">
-                <img mat-card-image src="../../assets/two-hearts.svg" alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                    <mat-card-title>Group Access</mat-card-title>
-                    <p>
-                      Access to private groups only focused on learning that have all the members together.
-                    </p>
-                  </mat-card-content>
-              </mat-card>
-        </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12 md-2">
+      <mat-card class="example-card">
+        <img mat-card-image src="../../assets/flag.svg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <mat-card-title>Goals</mat-card-title>
+          <p>
+            Improving the language that you're learning by engaging in healthy conversations+ making friends
+          </p>
+        </mat-card-content>
+      </mat-card>
     </div>
-</div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <mat-card class="example-card">
+        <img mat-card-image src="../../assets/dollar.svg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <mat-card-title>Pricing</mat-card-title>
+          <p>
+            Pay what you can! Pay as less as 2 euros and join the cohort.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <mat-card class="example-card">
+        <img mat-card-image src="../../assets/two-hearts.svg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <mat-card-title>Group Access</mat-card-title>
+          <p>
+            Access to private groups only focused on learning that have all the members together.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12 md-2 offset-lg-4 offset-md-4">
+      <mat-card class="france text-center">
+        <img mat-card-image src="../../assets/france.svg">
+        <mat-card-content>
+          <mat-card-title class="fr">FRENCH</mat-card-title>
+          <p class="text-warning"> Introductory Offer- ITS FREE!!</p>
+          <mat-list>
+            <div mat-subheader>What is included?</div>
+            <mat-list-item *ngFor="let folder of folders">
+              <mat-icon mat-list-icon>folder</mat-icon>
+              <div mat-line>{{folder}}</div>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdbSEtygWj1swvzj98Oav0lW2unV0NCC0YJIP1O8FOLj2hEwQ/viewform?usp=sf_link">
+          <button class="btn btn-success btn-block"> Sign Up</button>
+        </a>
 
+      </mat-card>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col md-2">
+      <mat-card class="new text-center">
+        <img mat-card-image src="../../assets/france.svg">
+        <mat-card-content>
+          <mat-card-title class="fr">Looking for a language?</mat-card-title>
+          <p>Kindly fill your name and the language you desire to help us decide which language
+            to introduce next!</p>
+        </mat-card-content>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScT1MUgmnqQTqy6b4HVat0W1LoGXy-rjFNQCt8U6L2sWkyb8Q/viewform?usp=sf_link">
+          <button class="btn btn-warning btn-block">Get Language</button>
+        </a>
+      </mat-card>
+    </div>
+  </div>
+</div>

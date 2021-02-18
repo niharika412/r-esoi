@@ -18,6 +18,8 @@ import {MatListModule} from '@angular/material/list';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { AboutComponent } from './about/about.component';
 import { SignupComponent } from './signup/signup.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { QuicksignComponent } from './quicksign/quicksign.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,14 @@ import { SignupComponent } from './signup/signup.component';
     PlansComponent,
     DashboardComponent,
     AboutComponent,
-    SignupComponent
+    SignupComponent,
+    QuicksignComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,OverlayModule,
-    MatListModule,MatToolbarModule,MatIconModule,MatSidenavModule,MatButtonModule,NgbModule,MatSlideToggleModule, MatCardModule, MatGridListModule
+    MatListModule,MatToolbarModule,MatIconModule,MatSidenavModule,MatButtonModule,NgbModule,MatSlideToggleModule, MatCardModule, MatGridListModule,MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

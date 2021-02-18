@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit, Output,EventEmitter } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-navbar',
@@ -8,8 +9,15 @@ import { ThemePalette } from '@angular/material/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
+  
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogContentExampleDialog);
 
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
   imagePath = '../../assets/logo.png';
   width: any;
   ngOnInit(): void {
@@ -34,3 +42,11 @@ export class NavbarComponent implements OnInit {
   }
   
 }
+
+
+@Component({
+  selector: 'dialog-content-example-dialog',
+  templateUrl: 'dialog-content.html',
+  
+})
+export class DialogContentExampleDialog {}
