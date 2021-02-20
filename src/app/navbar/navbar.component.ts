@@ -27,6 +27,7 @@ export class NavbarComponent implements OnInit {
   onResize() {
     this.width = window.innerWidth;
   }
+
   isOpen = false;
   color: ThemePalette = 'accent';
   checked = false;
@@ -39,6 +40,9 @@ export class NavbarComponent implements OnInit {
   toggle(trigger: any) {
     this.triggerOrigin = trigger;
     this.isOpen = !this.isOpen
+  }
+  @HostListener('document:click', ['$event'])
+  documentClick(event: MouseEvent) {
   }
   
 }

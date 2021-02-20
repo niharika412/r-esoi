@@ -1,5 +1,5 @@
 <mat-toolbar class="first-toolbar">
-  <span><button mat-icon-button (click)="isOpen=!isOpen" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+  <span><button mat-icon-button (click)="isOpen=!isOpen" [routerLink]="['/home']" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
       <mat-icon *ngIf="isOpen==false; else close">menu</mat-icon>
       <ng-template #close>
         <mat-icon *ngIf="width<640">highlight_off</mat-icon>
@@ -36,7 +36,7 @@
           house_siding
         </span>
       </a></mat-list-item>
-    <mat-list-item role="listitem"><a class="features" mat-button  [routerLink]="['/about']">ABOUT
+    <mat-list-item role="listitem"><a class="features" mat-button [routerLink]="['/about']">ABOUT
         <span class="material-icons icons">receipt</span>
       </a></mat-list-item>
     <mat-list-item role="listitem"><a class="features" mat-button [routerLink]="['/plans']">PLANS
@@ -44,7 +44,7 @@
           play_lesson
         </span>
       </a></mat-list-item>
-      <mat-list-item role="listitem"><a class="features signup" mat-button (click)="openDialog()">SIGN UP-ITS FREE!
+    <mat-list-item role="listitem"><a class="features signup" mat-button (click)="openDialog()">SIGN UP-ITS FREE!
       </a></mat-list-item>
   </mat-list>
 </ng-template>

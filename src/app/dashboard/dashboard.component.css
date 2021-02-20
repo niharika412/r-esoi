@@ -15,6 +15,13 @@ img{
     color:#2b5468;
 }
 
+.fixed{
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 2;
+}
+
 
 /* // Relevant styles */
 .image-stack {

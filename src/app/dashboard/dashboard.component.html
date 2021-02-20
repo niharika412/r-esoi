@@ -29,7 +29,9 @@
 </ngb-carousel>
 
 <a [routerLink]="['/signup']" *ngIf="small">
-  <button class="btn btn-success text-center btn-block">Sign Up</button></a>
+  <button class="btn btn-success text-center btn-block fixed">Sign Up</button></a>
+
+
 <div class="container">
   <div class="description">
     <p class="text-center dtitle" [ngStyle]="small?{'font-size': '40px'} : {'font-size': '90px'}">What is réesoi?</p>
@@ -46,10 +48,10 @@
       <div class="container">
         <div class="image-stack">
           <div class="image-stack__item image-stack__item--top">
-            <img src="../../assets/sign.jpg" alt="">
+            <img src="../../assets/sign.jpg" alt="This is your sign picture">
           </div>
           <div class="image-stack__item image-stack__item--bottom">
-            <img src="../../assets/social.jpg" alt="">
+            <img src="../../assets/social.jpg" alt="Connect with us ">
           </div>
         </div>
       </div>
@@ -68,7 +70,10 @@
         </span> A computer and a fair internet connection is all you need.
       </ul>
       <br>
-      <p><button class="btn btn-warning text-center">Sign Up</button>
+      <p>
+        <a [routerLink]="['/signup']">
+          <button class="btn btn-warning text-center">Sign Up</button>
+        </a> 
         &nbsp;
         <a [routerLink]="['/plans']">
           <button class="btn btn-success text-center">Read about the Plans</button>
